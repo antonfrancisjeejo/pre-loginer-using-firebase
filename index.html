@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pre Loginer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="icon.ico">
+  </head>
+  <body>
+    <h1>Pre Loginer</h1>
+    <hr>
+    <div class="text-center">
+      <form
+        class="form-signin"
+        action="index.html"
+        onsubmit="emailSignup()"
+      >
+        <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input
+          type="email"
+          name="emailed"
+          class="form-control"
+          id="userEmail"
+          placeholder="Email address"
+          required
+          autofocus
+        />
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input
+          type="password"
+          name="passwords"
+          class="form-control"
+          id="userPassword"
+          placeholder="Password"
+          required
+        />
+        <button class="btn btn-lg btn-primary" type="submit">
+          Sign up
+        </button>        
+      </form>
+      <form
+      class="form-signin"
+      action="index.html"
+      onsubmit="emailSignin()"
+    >
+      <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input
+        type="email"
+        name="emailed"
+        class="form-control"
+        id="signinemail"
+        placeholder="Email address"
+        required
+        autofocus
+      />
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input
+        type="password"
+        name="passwords"
+        class="form-control"
+        id="signinPassword"
+        placeholder="Password"
+        required
+      />
+      <button class="btn btn-lg btn-primary" type="submit">
+        Sign in
+      </button>      
+    </form>
+    </div>
+    <div class="text-center">
+      <img
+        class="twitter"
+        src="icons/twitter_icon.png"
+        alt="image"
+        onclick="twitterSignin()"
+      />
+      <img
+        src="icons/google_icon.png"
+        alt="image"
+        onclick="googleSigninProcess()"
+      />
+      <img src="icons/github_icon.svg" alt="image" onclick="githubSignin()" />
+      <img
+        class="microsoft"
+        src="icons/microsoft_icon.png"
+        alt="image"
+        onclick="microsoftSignin()"
+      />
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+
+    <!-- firebase written script -->
+    <script src="firebaseAPI.js"></script>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+  <footer>
+     <p class="mt-5 mb-3 text-muted text-center">&copy; Anton Francis Jeejo</p>
+  </footer>
+</html>
